@@ -1,27 +1,14 @@
-.heading {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    color: whitesmoke;
-    text-transform: uppercase;
-}
-
 body {
     background-color: #3A517D;
     margin: 0;
     padding: 0;
 }
 
-
-#paragraph {
-    width: 100%; 
-    text-align: center;  
-    flex-flow: column;
-    margin-top: 30%;
+.heading {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: large;
-    font-weight: bold;
+    font-size: larger;
     color: whitesmoke;
-    
+    text-transform: uppercase;
 }
 
 .content {
@@ -42,10 +29,28 @@ body {
     flex-flow: row;
 }
 
-.myButton{
-    padding: 5px 25px;
+#paragraph {
+    width: 100%; 
+    text-align: center;  
+    flex-flow: column;
+    margin-top: 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
     font-weight: bold;
+    color: whitesmoke;   
+}
+
+#temp {
+    text-align: center;  
+    flex-flow: column;
+    margin-left: 560px;
+    margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.myButton{
+    padding: 1.9px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    border-radius: 10px;  
+    border-radius: 5px;  
 }
