@@ -28,20 +28,16 @@
     function login() {
       var accessCode = document.getElementById('accessCode').value;
 
-      // Verify the access code (you can replace this with your verification logic)
       if (accessCode === 'eravol') {
-        // Change the page to the control panel
         window.location.href = './controlpanel.html';
       } else {
         document.getElementById('warningBox').style.display = 'block';
-        // Clear the access code field and focus on it for re-entry
         document.getElementById('accessCode').value = '';
         document.getElementById('accessCode').focus();
       }
     }
 
     function home() {
-      // Change the page to the home page
       window.location.href = './home.html';
     }
     </script>
