@@ -12,36 +12,38 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="">
+      <form id="loginForm">
         <h1>Login</h1>
+        <div class="warning-box" id="warningBox">Incorrect access code. Please try again.</div>
         <div class="input-box">
-          <input type="text" placeholder="Username" required />
-          <i class="bx bxs-user"></i>
+          <input type="password" id="accessCode" placeholder="Access Code" required />
+          <i class="bx bxs-key"></i>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" required />
-          <i class="bx bxs-lock-alt"></i>
-        </div>
-        <div>
-          <button type="submit" class="btn" onclick="doSomething()">
-            Login
-          </button>
-          <button type="submit" class="btn" onclick="doSomething2()">
-            Afbryd
-          </button>
-        </div>
+        <button type="button" class="btn" onclick="login()">Login</button>
+        <button type="button" class="btn" onclick="home()">Cancel</button>
       </form>
     </div>
 
     <script>
-      function doSomething() {
-        // Change the page to a new URL
+    function login() {
+      var accessCode = document.getElementById('accessCode').value;
+
+      // Verify the access code (you can replace this with your verification logic)
+      if (accessCode === 'eravol') {
+        // Change the page to the control panel
         window.location.href = './controlpanel.html';
+      } else {
+        document.getElementById('warningBox').style.display = 'block';
+        // Clear the access code field and focus on it for re-entry
+        document.getElementById('accessCode').value = '';
+        document.getElementById('accessCode').focus();
       }
-      function doSomething2() {
-        // Change the page to a new URL
-        window.location.href = './home.html';
-      }
+    }
+
+    function home() {
+      // Change the page to the home page
+      window.location.href = './home.html';
+    }
     </script>
   </body>
 </html>
